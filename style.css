@@ -203,6 +203,49 @@ body.dark-mode #schedule tbody tr:hover {
     border-bottom: none;
 }
 
+/* History Section */
+#history {
+    padding: 2em;
+    margin: 1em;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    position: relative;
+    z-index: 10;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode #history {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #eee;
+}
+
+.history-timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-item {
+    margin-bottom: 2em;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .timeline-item {
+    border-color: #555;
+    background-color: rgba(68, 68, 68, 0.8);
+    color: #fff;
+}
+
+.timeline-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
 /* Enroll Button */
 .enroll-button {
     display: inline-block;
@@ -258,8 +301,10 @@ body.dark-mode footer {
     background-color: #ccc;
     transition: .4s;
     border-radius: 34px;
-    text-align: left;
-    padding: 0.3em;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 34px;
+    width: 100%;
     color: #333;
 }
 
@@ -278,18 +323,8 @@ body.dark-mode footer {
 input:checked + i {
     background-color: #666;
     color: #fff;
-    text-align: right;
-    padding: 0.3em;
 }
 
 input:checked + i:before {
     transform: translateX(26px);
-}
-
-/* New styles for the toggle switch */
-.theme-switch i {
-    font-size: 1.2em; /* Adjust the size as needed */
-    line-height: 34px; /* Vertically center the icon */
-    text-align: center; /* Center the icon horizontally */
-    width: 100%; /* Make sure the icon covers the entire switch */
 }
